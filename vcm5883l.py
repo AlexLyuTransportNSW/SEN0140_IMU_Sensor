@@ -35,4 +35,13 @@ class VCM5883L:
         return value
 
     def __del__(self):
-        self.bus.close()
+        self.bus.cl
+
+    def read_x_axis(self):
+        return self.read_two_bytes(0x00, 0x01)
+
+    def read_y_axis(self):
+        return self.read_two_bytes(0x02, 0x03)
+
+    def read_z_axis(self):
+        return self.read_two_bytes(0x04, 0x05)

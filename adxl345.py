@@ -36,3 +36,12 @@ class ADXL345:
 
     def __del__(self):
         self.bus.close()
+
+    def read_x_axis(self):
+        return self.read_two_bytes(0x32, 0x33)
+
+    def read_y_axis(self):
+        return self.read_two_bytes(0x34, 0x35)
+
+    def read_z_axis(self):
+        return self.read_two_bytes(0x36, 0x37)
