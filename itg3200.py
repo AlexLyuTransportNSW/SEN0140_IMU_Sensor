@@ -11,7 +11,7 @@ class ITG3200:
         # Sample Rate Divider
         self.write_byte(0x15, 0x07)  # Set sample rate to 125 Hz
         # DLPF, Full Scale
-        self.write_byte(0x16, 0x1E)  # Â±2000 degrees/sec, low pass filter at 1kHz
+        self.write_byte(0x16, 0x1E)  # �2000 degrees/sec, low pass filter at 1kHz
         # Power Management
         self.write_byte(0x3E, 0x01)  # Use X gyro oscillator
 
